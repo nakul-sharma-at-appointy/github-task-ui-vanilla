@@ -125,7 +125,7 @@ body {
 .repo-div {
   width: 80%;
   /* background-color: blue; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 10rem;
   padding: 1.5rem 0rem 1.5rem 1.5rem;
 }
@@ -281,11 +281,11 @@ body {
 }
 
 .input-button {
-  padding: 8px 16px;
+  padding: 5px 16px;
   background-color: #f3f4f6;
   border: 1px solid #d0d7de;
   color: #24292f;
-  font-weight: 550;
+  font-weight: bold;
   line-height: 20px;
   font-size: 14px;
   border-radius: 6px;
@@ -302,6 +302,101 @@ body {
 }
 
 .repo-display-div {
-  padding: 3.25rem 0rem;
-  border: 1px solid blue;
+  padding: 1.75rem 0rem;
+  /* border: 1px solid blue; */
+  border-top: 1px solid #d0d7de;
+  margin-top: 1.5rem;
+}
+
+.repo-title {
+  color: #0969da;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+}
+
+.repo-title-div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.repo-status {
+  border: 1px solid #d0d7de;
+  border-radius: 24px;
+  color: #656d76;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 0px 7px;
+  text-align: left;
+}
+
+.repo-star-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 6px 0px 0px 6px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 3px 12px;
+  text-align: center;
+  font-family: inherit;
+}
+
+.repo-title-star-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.repo-subinfo-div {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.sub-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.language-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #1f2328;
+  border-radius: 50%;
+}
+
+.c-lang {
+  background-color: #1f2328;
+}
+
+.lang-text {
+  color: #656d76;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  font-family: inherit;
+}
+
+.desc-text {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0px 0px 8px;
+  padding: 0px 24px 0px 0px;
+  text-align: left;
+  padding-top: 0.25rem;
+  padding-bottom: 0.4rem;
+}
+
+.js-lang {
+  background-color: #f1e05a;
+}
+
+.cplusplus-lang {
+  background-color: #f34b7d;
 }
