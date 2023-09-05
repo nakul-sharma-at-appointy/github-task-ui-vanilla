@@ -123,11 +123,11 @@ body {
 }
 
 .repo-div {
-  width: 70%;
+  width: 80%;
   /* background-color: blue; */
   border: 1px solid red;
   height: 10rem;
-  padding: 1.5rem;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
 }
 
 .user-profile-img {
@@ -277,6 +277,7 @@ body {
   padding: 5px 12px;
   box-shadow: #d0d7de 0px 1px 0px 0px;
   width: 36.5rem;
+  font-family: inherit;
 }
 
 .input-button {
@@ -284,7 +285,7 @@ body {
   background-color: #f3f4f6;
   border: 1px solid #d0d7de;
   color: #24292f;
-  font-weight: 500;
+  font-weight: 550;
   line-height: 20px;
   font-size: 14px;
   border-radius: 6px;
@@ -292,4 +293,15 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
+}
+
+.input-buttons-div {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.repo-display-div {
+  padding: 3.25rem 0rem;
+  border: 1px solid blue;
 }
