@@ -46,7 +46,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .header-userinfo {
@@ -479,18 +479,18 @@ body {
 
 @media only screen and (max-width: 1000px) {
   .header-background {
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 }
 
 @media only screen and (max-width: 1150px) {
   .header-background {
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .github-body {
     margin: 0rem 1.5rem;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
   }
 
   .repo-div {
@@ -516,11 +516,12 @@ body {
     margin: 1.5rem 0.5rem;
     flex-direction: column-reverse;
     align-items: center;
+    gap: 1rem;
   }
 
   .user-profile-img-div {
     height: 14rem;
-    width: 80%;
+    width: 100%;
   }
 
   .user-profile-img {
@@ -612,5 +613,25 @@ body {
 
   .repository-search-input {
     min-width: 100%;
+  }
+
+  .footer-links-div {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-navigate {
+    overflow: scroll;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .user-profile-img-div {
+    width: 3rem;
+  }
+
+  .user-profile-img {
+    width: 3rem;
   }
 }
