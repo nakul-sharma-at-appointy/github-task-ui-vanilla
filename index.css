@@ -1,25 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Open+Sans:wght@500;600&display=swap");
-:root {
-  --base-size-0: 0rem;
-  --base-size-4: 0.25rem;
-  --base-size-8: 0.5rem;
-  --base-size-12: 0.75rem;
-  --base-size-16: 1rem;
-  --base-size-32: 2rem;
-  --base-size-48: 3rem;
-
-  --header-bg: #f6f8fa;
-  --color-border-default: #d0d7de;
-  --color-fg-muted: #656d76;
-  --color-btn-border: rgba(31, 35, 40, 0.15);
-  --color-fg-default: #1f2328;
-
-  --borderWidth-thin: max(1px, 0.0625rem);
-
-  --borderRadius-medium: 0.375rem;
-  --borderRadius-full: 50%;
-}
-
 * {
   margin: 0px;
   padding: 0px;
@@ -27,12 +6,12 @@
 }
 
 body {
-  margin: var(--base-size-0);
+  margin: 0rem;
   font-family: -apple-system, BlinkMacSystemFont, "Noto Sans", "Segoe UI",
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.5;
   font-size: 14px;
-  color: var(--color-fg-default);
+  color: #1f2328;
 }
 
 .header-background {
