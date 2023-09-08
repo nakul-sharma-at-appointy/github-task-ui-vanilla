@@ -177,6 +177,10 @@ body {
   line-height: 21px;
 }
 
+.label-no-display {
+  display: none;
+}
+
 .dot {
   background-color: #1f2328;
   width: 2px;
