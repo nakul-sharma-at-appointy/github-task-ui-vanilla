@@ -62,18 +62,15 @@ const repositories: repoType[] = [
     stars: 79,
     forks: 4,
   },
-  // Add more repositories as needed
 ];
 
-const repoContainer = document.querySelector(".repo-div"); // Select the container div
+const repoContainer = document.querySelector(".repo-div");
 console.log(Boolean(repoContainer));
 if (repoContainer) {
   for (let i = 0; i < repositories.length; i++) {
     const repo = repositories[i];
-    const repoDiv = document.createElement("div"); // Create a new div for each repository
-    repoDiv.className = "repo-display-div repository"; // Optionally, you can add a class to style the repository div
-
-    // Populate the repository div with data
+    const repoDiv = document.createElement("div");
+    repoDiv.className = "repo-display-div repository";
     repoDiv.innerHTML = `
       <!-- Add other details here -->
       <div class="repo-title-star-div">
