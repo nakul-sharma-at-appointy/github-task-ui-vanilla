@@ -189,6 +189,7 @@ function searchRepositories() {
     }
     renderRepositories(searchedRepositories);
   } else {
+    if (document.querySelector(".empty-search-state-div")) return;
     console.log(searchedRepositories.length);
     const emptyDiv = document.createElement("div");
     // repoDiv.className = "repo-display-div repository";
