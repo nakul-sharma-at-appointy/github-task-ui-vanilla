@@ -515,6 +515,14 @@ body {
   align-items: flex-start;
 }
 
+.empty-search-state-div {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-top: 4rem;
+  text-align: center;
+}
+
 @media only screen and (max-width: 1150px) {
   .github-body {
     margin: 0rem 1.5rem;

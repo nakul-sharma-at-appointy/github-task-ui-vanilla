@@ -64,13 +64,13 @@ const repositories: repoType[] = [
   },
 ];
 
+const repoContainer = document.querySelector(".repo-div") as HTMLDivElement;
+
 const searchInput = document.querySelector(
   ".repository-search-input"
 ) as HTMLInputElement;
 
 function renderRepositories(repositories: repoType[]) {
-  const repoContainer = document.querySelector(".repo-div") as HTMLDivElement;
-  console.log(Boolean(repoContainer));
   if (repoContainer) {
     for (let i = 0; i < repositories.length; i++) {
       const repo = repositories[i];
@@ -182,7 +182,24 @@ function searchRepositories() {
     len--;
   }
 
-  renderRepositories(searchedRepositories);
+  if (searchedRepositories.length > 0) {
+    const emptyDiv = document.querySelector(".empty-search-state-div");
+    if (emptyDiv) {
+      emptyDiv.remove();
+    }
+    renderRepositories(searchedRepositories);
+  } else {
+    console.log(searchedRepositories.length);
+    const emptyDiv = document.createElement("div");
+    // repoDiv.className = "repo-display-div repository";
+    emptyDiv.innerHTML = `
+    <!-- Add other details here -->
+    <div class="empty-search-state-div">
+    phoboslab doesn't have any repositories that match
+    </div>
+    `;
+    repoContainer.appendChild(emptyDiv);
+  }
 }
 
 searchInput.addEventListener("input", () => {
