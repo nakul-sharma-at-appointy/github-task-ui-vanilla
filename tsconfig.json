@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2016", "DOM"],
+    "module": "commonjs",
+    "outDir": "./build",
+    "strict": true,
+    "target": "ES2015",
+  },
+  "include": ["src", "src/index.ts"]
+}
