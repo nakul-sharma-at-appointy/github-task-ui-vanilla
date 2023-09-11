@@ -50,17 +50,17 @@ const repositories = [
         stars: 79,
         forks: 4,
     },
-    // Add more repositories as needed
 ];
-const repoContainer = document.querySelector(".repo-div"); // Select the container div
-console.log(Boolean(repoContainer));
-if (repoContainer) {
-    for (let i = 0; i < repositories.length; i++) {
-        const repo = repositories[i];
-        const repoDiv = document.createElement("div"); // Create a new div for each repository
-        repoDiv.className = "repo-display-div repository"; // Optionally, you can add a class to style the repository div
-        // Populate the repository div with data
-        repoDiv.innerHTML = `
+const searchInput = document.querySelector(".repository-search-input");
+function renderRepositories(repositories) {
+    const repoContainer = document.querySelector(".repo-div");
+    console.log(Boolean(repoContainer));
+    if (repoContainer) {
+        for (let i = 0; i < repositories.length; i++) {
+            const repo = repositories[i];
+            const repoDiv = document.createElement("div");
+            repoDiv.className = "repo-display-div repository";
+            repoDiv.innerHTML = `
       <!-- Add other details here -->
       <div class="repo-title-star-div">
         <div class="repo-title-div">
@@ -133,6 +133,33 @@ if (repoContainer) {
         <p class="lang-text lastModified">${repo.lastModified}</p>
       </div>
     `;
-        repoContainer.appendChild(repoDiv);
+            repoContainer.appendChild(repoDiv);
+        }
     }
 }
+let isSearchEmpty = true; // Track whether the search input is empty
+let searchedRepositories = repositories;
+function searchRepositories() {
+    const query = searchInput.value.toLowerCase(); // Get the search query and convert it to lowercase
+    searchedRepositories = [];
+    for (const repo of repositories) {
+        const repoTitle = repo.title.toLowerCase(); // Convert the repo title to lowercase
+        // Check if the search input is not empty and if the repo title contains the search query
+        if (repoTitle.includes(query)) {
+            searchedRepositories = [...searchedRepositories, repo];
+        }
+    }
+    let repoDiv = document.querySelectorAll(".repository");
+    let len = repoDiv.length;
+    while (len > 0) {
+        const repo = document.querySelector(".repository");
+        repo === null || repo === void 0 ? void 0 : repo.remove();
+        len--;
+    }
+    renderRepositories(searchedRepositories);
+}
+searchInput.addEventListener("input", () => {
+    isSearchEmpty = searchInput.value.trim() === ""; // Check if the search input is empty
+    searchRepositories();
+});
+renderRepositories(searchedRepositories);
