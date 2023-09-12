@@ -190,7 +190,7 @@ function searchRepositories() {
     renderRepositories(searchedRepositories);
   } else {
     if (document.querySelector(".empty-search-state-div")) return;
-    console.log(searchedRepositories.length);
+    // console.log(searchedRepositories.length);
     const emptyDiv = document.createElement("div");
     // repoDiv.className = "repo-display-div repository";
     emptyDiv.innerHTML = `
@@ -209,3 +209,12 @@ searchInput.addEventListener("input", () => {
 });
 
 renderRepositories(searchedRepositories);
+
+let debounceTimer: number | undefined;
+
+function debounceSearch() {
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    searchRepositories();
+  }, 300); // Adjust the debounce delay as needed (e.g., 300 milliseconds)
+}

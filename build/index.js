@@ -165,7 +165,7 @@ function searchRepositories() {
     else {
         if (document.querySelector(".empty-search-state-div"))
             return;
-        console.log(searchedRepositories.length);
+        // console.log(searchedRepositories.length);
         const emptyDiv = document.createElement("div");
         // repoDiv.className = "repo-display-div repository";
         emptyDiv.innerHTML = `
